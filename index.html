@@ -8,12 +8,12 @@
 		<script src="cv.js"></script>	
 		<script language="javascript" type="text/javascript">
 		function validation() {
-  var contenu_email = $(selecteur_champ_email).val();
+  var contenu_email = $("#email").val();
  
   valider_email(contenu_email);
 }
 function valider_email(email){
- 
+ consol.log(email);
   //si ce n'est pas le cas afficher une alerte.
 }
  </script>
@@ -62,10 +62,10 @@ function valider_email(email){
 		<form>
   <input type="text" name="nom" />
     <input type="text" name="prenom" /> 
-			 <input id='email' type="text" name="email" />
-			 <input id='telephone' type="text" name="telephone" />
-			 <input id='message' type="text" name="message" />
+			 <input id="email" type="text" name="email" />
+			 <input id="telephone" type="text" name="telephone" />
+			 <input id="message" type="text" name="message" />
 </form>
-		<button style="font-size: 50%;" onclick="afficher(' (selecteur_champ_email)');">soumettre</button>
+		<button style="font-size: 50%;" onclick="validation();">soumettre</button>
 	</body>
 </html>
