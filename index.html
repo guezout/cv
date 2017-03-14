@@ -1,71 +1,113 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-
 <html>
-	<head> 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="index.css">
-		<script src="cv.js"></script>	
-		<script language="javascript" type="text/javascript">
-		function validation() {
-  var contenu_email = $("#email").val();
+	<head>
+	<link rel="stylesheet" type="text/css" href="cv.css" >
+	<title>CV Miassa </title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="cv.js"></script>
+	<script language="javascript" type="text/javascript">
+	function validation() {
+ var contenu_email = $("#email").val();
+	
+ valider_email(contenu_email);
+	}
+	
+	function valider_email(email){
+ //vérifier que l'email contient le caractère @
+ //si ce n'est pas le cas afficher une alerte.
+	console.log(email);
+	}
  
-  valider_email(contenu_email);
-}
-function valider_email(email){
- console.log(email);
-  //si ce n'est pas le cas afficher une alerte.
-}
- </script>
-	<title> cv </title>
-		
+	</script>
 	
 	</head>
 	<body>
+	<a href="#Information">Information</a>
+	<a href="#Formation">Formation</a>
+	<a href="#Competences">Competences</a>
+	<a href="#Langue">Langue</a>
+	<a href="#Loisirs">Loisirs</a>
+	<h1>CurriculumVitae</h1>
+	<h2 >Information<button style="font-size: 50%;" onclick="afficher('#Formation');">cacher</button></h2>
 	
-		<h1 id="section2">information general </h1>
-		<button style="font-size: 50%;" onclick="afficher('#info');">cacher</button>
-		<ul> 
-		<div id="info">
-		<li>guezout miassa </li>
-		<li> 25 ans</li>
-		<li> 1 avenue albert einstein </li>
-		<li> guezout.miassa@yahoo.com </li>
-		
-		</ul>
-		
-		<h2 id="formation">formation  </h2>
-		<ul>
-		<div id="formation">
-		<li> master 2 competences complementaire en informatique <a href= "http://master-info.univ-lyon1.fr/CCI/"> site de la formation </a>  </li>
-		<li> master 2 en ingénieurie des systemes temps reel <a href= "http://www.univ-tlse3.fr/masters/master-ingenierie-des-systemes-temps-reel-664391.kjsp?RH=1455714623187"> site de la formation </a>    </li>
-		</ul>
-		<h3> compétences</h3>
-		<ul>
-		<div id="competence">
-		<p>langages de programmation: C,C++,MATLAB,Asembleur,shell,xml
-		   modelisation et gestion informatique : UML,Merise,ERP(SAP)</p>
-		<a href= "#section2"> information general </a>
-		</ul>
-		<h4> experience </h4>
-		<ul>
-		<div class="info">
-		<li> stage ingenieur robotique </li>
-		<p> consistait à corriger la positio du robot grace aux données 
-		du trcker laser pour l'asservissement en position </p>
+	<div id="Information">
+	<p>
+	Nom:GUEZOUT<br>
+	Prenom: Miassa<br>
+	Age:25ans<br>
+	Telephone:0648859670<br>
+	mail "guezout.miassa@yahoo.com"<br>
+	Adresse:25 avenue Roger Salengro villeurbanne 69100
+	</p>
+	</div>
+	
+	<h2>Formation <button style="font-size: 50%;" onclick="afficher('#Formation');">cacher</button></h2>
+	<div id= "Formation">
+	<ul>
+	<li><a href=http://www.univ-lyon1.fr/> Allez vers le site de la faculte</a></li>
+	<li> 2016/2017 Master2: Competences complimentaires en Informatique </li>
+	<li>universite:Claude Bernard Lyon</li>
+        <li>  <a href= "http://www.univ-tlse3.fr/masters/master-ingenierie-des-systemes-temps-reel-664391.kjsp?RH=1455714623187"> site de la formation </a>    </li>
+	<li> 2015/2016 master 2 : ingénieurie des systemes temps reel </li>
+	<li>universite:Paul Sabatier Toulouse III</li> 
+	<li> 2014 Licence: Automatique </li>
+	<li>universite: MOULOUD MAMMERI Tizi-Ouzou</li>
 	</ul>
-	<h5>langues </h5>
-	<div class="info">
-		<li> francais </li>
-<li> anglais </li>
-<li> arabe </li>	
-		<form>
-  <input type="text" name="nom" />
-    <input type="text" name="prenom" /> 
-			 <input id="email" type="text" name="email" />
-			 <input id="telephone" type="text" name="telephone" />
-			 <input id="message" type="text" name="message" />
+	</div>
+	
+	<h2 >Competences<button style="font-size: 50%;" onclick="afficher('#Competences');">cacher</button></h2>
+	<div id="Competences">
+	<ul>
+	<li>SystemeExploitation:Unix Linux WindowsCE Windows</li>
+	<li>angages:C, Java, ,JavaSript, HTML5/CSS3, Shell; Visual Studio; Matlab/Simulink; Labview</li>
+	<li>BaseDeDonnees:SGBD, SQL server, MySQL, Oracle</li>
+	<li>MetodologieConception: Merise, UML</li>
+	<li>Automatisme:automates, Unity,step7</li>
+	</ul>
+	</div>
+	<h2 >Experiences<button style="font-size: 50%;" onclick="afficher('#Experiences');">cacher</button></h2>
+	<div id= "Experiences">
+	
+	<div>
+	<a href=http://http://www.lucas-robotic-system.com/fr>Allez vers le site de l'entreprise </a>
+	<h5>Stage2016:Entreprise Lucas France </h5>
+	Theme: Pilotage d’un robot Comau par données d’un tracker laser.
+	</div>
+	</div>
+	
+	<h2 >Langue<button style="font-size: 50%;" onclick="afficher('#Langue');">cacher</button></h2>
+	<div id= "Langue">
+	<ul>
+	<li>Kabyle : Maternelle. </li>
+	<li>Francais : Bilingue.</li>
+	<li>Anglais : Technique.</li>
+	<li>Arabe Bilingue</li>
+	</ul>
+	</div>
+	<h2 >Loisirs<button style="font-size: 50%;" onclick="afficher('#Loisirs');">cacher</button></h2>
+	<div id= "Loisirs">
+	<ul>
+	<li>cinema </li>
+	<li>Lecture: Romans </li>
+	</ul>
+	</div>
+<h2 >Contact<button style="font-size: 50%;" onclick="afficher('#Contact');">cacher</button></h2>
+<div id= "Contact">
+<form>
+	<label for="nom">Nom</label>
+ <input id="nom" type="text" name="nom" /><br>
+	<label for="prenom">Prénom</label>
+	<input id="prenom" type="text" name="prenom" /><br>
+	<label for="email">Email</label>
+	<input id="email" type="text" name="email" /><br>
+	<label for="telephone">Téléphone</label>
+	<input id="telephone "type="text" name="telephone" /><br>
+	<label for="message">Message</label>
+	<input id="message" type="text" name="message" />
 </form>
-		<button style="font-size: 50%;" onclick="validation();">soumettre</button>
+</div>	
+ <a style="font-size: 50%;" onclick="validation()">submit</a>
+
 	</body>
 </html>
